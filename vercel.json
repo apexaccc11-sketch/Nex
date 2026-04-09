@@ -2,8 +2,8 @@
   "cleanUrls": false,
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/",
+      "destination": "/iamnex.com/landing.html"
     }
   ]
 }
