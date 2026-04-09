@@ -1304,10 +1304,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <!-- ============= TIER 2 (FEATURED) ============= -->
       <div class="nex-pricing-card featured">
-        <div class="nex-popular-badge">Most Popular</div>
-
         <div class="nex-card-inner">
           <div class="nex-plan-header">
+            <span class="nex-plan-kicker">Most Popular</span>
             <h3>Growth</h3>
             <p class="plan-tagline">For busy teams needing full power & automation.</p>
           </div>
@@ -1318,8 +1317,14 @@ document.addEventListener("DOMContentLoaded", () => {
             <span class="price-period">/mo</span>
           </div>
 
-          <ul class="nex-plan-features">
-            <li>Everything in Starter</li>
+          <ul class="nex-plan-features nex-plan-features-growth">
+            <li class="is-soft">Mobile App</li>
+            <li class="is-soft">Appointment Booking</li>
+            <li class="is-soft">Call Recordings & Transcripts</li>
+            <li class="is-soft">Answers Calls 24/7</li>
+            <li class="is-soft">Robot-like Memory (Never Forgets)</li>
+            <li class="is-soft">Post-Call Actions</li>
+            <li class="is-soft">SMS / Customer Check-Up System</li>
             <li>Professional Landing Page / Website</li>
             <li>Google Reviews Boost System</li>
           </ul>
@@ -2058,16 +2063,17 @@ document.addEventListener("DOMContentLoaded", function() {
   transform: translateY(-4px);
 }
 
-.nex-popular-badge {
-  position: absolute;
-  top: 12px;
-  left: 22px;
-  z-index: 3;
-  background: #16A34A;
-  color: #ecfdf5;
-  padding: 6px 14px;
+.nex-plan-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  padding: 6px 12px;
   border-radius: 999px;
-  font-size: .74rem;
+  background: rgba(22,163,74,0.10);
+  color: #15803d;
+  border: 1px solid rgba(22,163,74,0.18);
+  font-size: .72rem;
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -2139,6 +2145,19 @@ document.addEventListener("DOMContentLoaded", function() {
   position: absolute;
   left: 0;
   top: 6px;
+}
+
+.nex-plan-features-growth .is-soft {
+  font-size: .84rem;
+  color: #7c8aa0;
+  margin-bottom: 8px;
+}
+
+.nex-plan-features-growth .is-soft::before {
+  width: 6px;
+  height: 6px;
+  top: 7px;
+  background: rgba(22,163,74,0.55);
 }
 
 .cta-holder {
@@ -2280,12 +2299,10 @@ input:checked + .slider.round:before {
     padding: 30px 22px;
   }
 
-  .nex-popular-badge {
-    top: 12px;
-    right: 12px;
-    left: auto;
-    font-size: .68rem;
+  .nex-plan-kicker {
+    font-size: .66rem;
     padding: 6px 10px;
+    margin-bottom: 10px;
   }
 }
 </style>
